@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
+
 
 class Usuario extends Model
 {
+
     //
     protected $fillable=['nick','nombre','correo','clave','fecha_de_nacimiento'];
 

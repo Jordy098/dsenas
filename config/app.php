@@ -179,6 +179,7 @@ return [
 
         //Providers personales
         Cviebrock\EloquentSluggable\ServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
 
 
     ],
@@ -233,12 +234,8 @@ return [
         /*
         Aliases Personales
         */
-        'aliases' => [
-    // ...
       'Form' => Collective\Html\FormFacade::class,
       'Html' => Collective\Html\HtmlFacade::class,
-    // ...
-  ],
 
     ],
 

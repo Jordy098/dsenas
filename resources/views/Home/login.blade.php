@@ -66,23 +66,42 @@
     </nav>
 
     <!-- Header -->
-    <header>
-        <div class="container" id="maincontent" tabindex="-1" style="margin-top: -40px;">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive" src="{{asset('img/logi.png')}}" alt="">
-                    <div class="intro-text">
-                        <h1 class="name">¡Te damos la bienvenida a <font color="#33ff33">D</font>Señas!</h1>
-                        @yield('saludo')
-                        <hr class="star-light">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
 
     <!-- Portfolio Grid Section -->
-    
+    <section id="portfolio" style="margin-top: 80px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Login</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <form action="Login.php" method="post" name="frm1">
+    <table align="center">
+    <tr height="50">
+    <td><input name="txtNombre" class="form-control" style="width: 400px;height: 45px;" placeholder="Ingresa Nombre" type="text" /></td>
+    <td></td>
+    </tr>
+    <tr height="100">
+    <td><input name="txtClave" class="form-control" style="width: 400px;height: 45px;" type="password" placeholder="Ingresa Contraseña" /></td>
+    <td></td>
+    </tr>
+    <tr height="50">
+    <td><input name="btnLogin" class="btn btn-primary" style="width: 100px;height: 35px; type="submit" value="Login" /><a href="#" style="margin-left:50px;">Recuperar Contraseña</a></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td></td>
+    </tr>
+    </table>
+    </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
 
     <!-- jQuery -->
     <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
@@ -103,4 +122,3 @@
 </body>
 
 </html>
-
