@@ -1,10 +1,10 @@
 @extends('Home.indexadmin')
 @section('formulario')
 
-<div class="row" style="margin-top: 250px;">
+<div class="row" style="margin-top: 90px;">
   <div class="col-xs-6 col-sm-3">
   <img src="{{ asset('img/imag/categoria.png') }}" width="200" height="200" style="margin-left: 40px;">
-  <div style="margin-left: 95px;"><a href="#" class="btn btn-primary">Categoria</a></div>
+  <div style="margin-left: 95px;"><a href="{{ route('categorias.index') }}" class="btn btn-primary">Categoria</a></div>
   </div>
   <div class="col-xs-6 col-sm-3">
   	<img src="{{ asset('img/imag/lista.png') }}" width="200" height="200" style="margin-left: 40px;">

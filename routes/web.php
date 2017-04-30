@@ -29,7 +29,11 @@ Route::group(['prefix'=>'admin'],function(){
 Route::group(['prefix'=>'admin'],function(){
 	
 	Route::resource('categorias','CategoriasController');
-
+	//Ruta de eliminar
+	Route::get('categorias/{id}/destroy',[
+		'uses'=>'CategoriasController@destroy',
+		'as'=>'admin.categorias.destroy'
+		]);
 });
 
 //Ruta Registrar Usuario	

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Palabra extends Model
 {
     protected $table='palabras';
-    protected $fillable=['nombre'];
+    protected $fillable=['nombre','categoria_id'];
 
     public function categoria ()
     {

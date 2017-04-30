@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Video extends Model
 {
      protected $table='videos';
-     protected $fillable=['url'];
+     protected $fillable=['url','palabra_id','region_id','estado_id'];
 
      public function region()
      {

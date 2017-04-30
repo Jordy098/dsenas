@@ -3,7 +3,9 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="{{ asset('bootstrap/css/bootstrap.css') }}">
+
 <link href="{{asset('css/freelancer.min.css')}}" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('icon/style.css') }}">
     <title></title>
 </head>
 <body>
@@ -24,22 +26,22 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">Inicio</a>
+                        <a href="{{ url('admin/view') }}"><span class="icon-home3"></span> Inicio</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">Palabra</a>
+                        <a href="#about"><span class="icon-product-hunt"></span> Palabra</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">Categoria</a>
+                        <a href="{{ route('categorias.index') }}"><span class="icon-stack"></span> Categoria</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">Video</a>
+                        <a href="#about"><span class="icon-film"></span> Video</a>
                     </li>
                     <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sesion <span class="caret"></span></a>
-          <ul class="dropdown-menu" style="background-color:#009999">
-            <li style="background-color:#009999"><a href="#">Editar</a></li>
-            <li style="background-color:#009999"><a href="#">Salir</a></li>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="icon-user"></span> Sesion <span class="caret"></span></a>
+          <ul class="dropdown-menu" style="background-color:#024959">
+            <li ><a href="#" style="background-color:#024959"><span class="glyphicon glyphicon-pencil"></span> Editar</a></li>
+            <li ><a href="#" style="background-color:#024959"><span class="icon-sign-out"></span> Salir</a></li>
           </ul>
         </li>
                 </ul>
@@ -48,9 +50,15 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-    @yield('formulario')
+    <div class="container" style="margin-top: 150px">
+        @yield('formulario')
+    </div>
 </body>
 <script type="text/javascript" src="{{ asset('plugins/jquery/jquery-3.2.1.js') }}"></script>
 <script type="text/javascript" src="{{ asset('bootstrap/js/bootstrap.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+<script>
+    $('#flash-overlay-modal').modal();
+</script>
 </html>
 

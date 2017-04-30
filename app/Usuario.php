@@ -10,7 +10,7 @@ class Usuario extends Model
 {
 
     //
-    protected $fillable=['nick','nombre','correo','clave','fecha_de_nacimiento'];
+    protected $fillable=['nick','nombre','correo','clave','fecha_de_nacimiento','rol_id'];
 
     public function rol()
     {
