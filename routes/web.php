@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 //Ruta Login
-Route::get('/login', 'UsuarioController@index2');
+//Route::get('/login', 'UsuarioController@index2');
 //Ruta Presentacion
 Route::get('/inicio', 'UsuarioController@index');
 
@@ -34,6 +34,18 @@ Route::group(['prefix'=>'admin'],function(){
 		'uses'=>'CategoriasController@destroy',
 		'as'=>'admin.categorias.destroy'
 		]);
+	Route::resource('palabras','PalabraController');
+	//Ruta de eliminar
+	Route::get('palabras/{id}/destroy',[
+		'uses'=>'PalabraController@destroy',
+		'as'=>'admin.palabras.destroy'
+		]);
+	Route::resource('videos','VideoController');
+	//Ruta de eliminar
+	Route::get('videos/{id}/destroy',[
+		'uses'=>'VideoController@destroy',
+		'as'=>'admin.videos.destroy'
+		]);
 });
 
 //Ruta Registrar Usuario	
@@ -49,10 +61,10 @@ Route::resource('usuarios','UsuarioController');
 });*/
 
 
-//Auth::routes();
+Auth::routes();
 
-/*Route::get('/home', 'HomeController@index');
+Route::get('/home', 'HomeController@index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');*/
+Route::get('/home', 'HomeController@index');

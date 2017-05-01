@@ -11,11 +11,11 @@ class CategoriasController extends Controller
     public function index()
     {
         $categorias=Categoria::orderBy('id','ASC')->paginate(5);
-        return view('Administrador.listacategoria')->with('categorias',$categorias); 
+        return view('Administrador.Categorias.listacategoria')->with('categorias',$categorias); 
     }
     public function create()
     {
-        return view('Administrador.categoria');
+        return view('Administrador.Categorias.categoria');
     }
     public function store(Request $request)
     {
@@ -27,7 +27,7 @@ class CategoriasController extends Controller
      public function edit($id)
     {
         $categorias=Categoria::find($id);
-        return view('Administrador.edit')->with('categorias',$categorias);
+        return view('Administrador.Categorias.edit')->with('categorias',$categorias);
     }
      public function update(Request $request, $id)
     {

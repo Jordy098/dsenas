@@ -16,10 +16,10 @@ class AddFavoritosTabla extends Migration
         Schema::create('favoritos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('video_id')->unsigned();
-            $table->integer('usuario_id')->unsigned();
+            $table->integer('user_id')->unsigned();
 
             $table->foreign('video_id')->references('id')->on('videos');
-            $table->foreign('usuario_id')->references('id')->on('usuarios');
+            $table->foreign('user_id')->references('id')->on('usuarios');
 
             $table->timestamps();
         });

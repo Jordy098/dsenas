@@ -8,7 +8,7 @@
   </div>
   <div class="col-xs-6 col-sm-3">
   	<img src="{{ asset('img/imag/lista.png') }}" width="200" height="200" style="margin-left: 40px;">
-  	<div style="margin-left: 80px;"><a href="#" class="btn btn-primary">Palabras</a></div>
+  	<div style="margin-left: 80px;"><a href="{{ route('palabras.index') }}" class="btn btn-primary">Palabras</a></div>
   </div>
   <div class="col-xs-6 col-sm-3" style="margin-top: 30px;">
   	<img src="{{ asset('img/imag/video.png') }}" width="200" height="150" style="margin-left: 40px;">

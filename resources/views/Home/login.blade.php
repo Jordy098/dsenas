@@ -77,26 +77,7 @@
                 </div>
             </div>
             <div class="row">
-                <form action="Login.php" method="post" name="frm1">
-    <table align="center">
-    <tr height="50">
-    <td><input name="txtNombre" class="form-control" style="width: 400px;height: 45px;" placeholder="Ingresa Nombre" type="text" /></td>
-    <td></td>
-    </tr>
-    <tr height="100">
-    <td><input name="txtClave" class="form-control" style="width: 400px;height: 45px;" type="password" placeholder="Ingresa Contraseña" /></td>
-    <td></td>
-    </tr>
-    <tr height="50">
-    <td><input name="btnLogin" class="btn btn-primary" style="width: 100px;height: 35px; type="submit" value="Login" /><a href="#" style="margin-left:50px;">Recuperar Contraseña</a></td>
-    <td></td>
-    </tr>
-    <tr>
-    <td></td>
-    <td></td>
-    </tr>
-    </table>
-    </form>
+                @yield('formulario')
             </div>
         </div>
     </section>

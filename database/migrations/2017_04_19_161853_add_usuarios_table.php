@@ -23,6 +23,7 @@ class AddUsuariosTable extends Migration
             $table->integer('rol_id')->unsigned()->default(1);
             
             $table->foreign('rol_id')->references('id')->on('roles');
+            $table->rememberToken();
             $table->timestamps();
         });
     }

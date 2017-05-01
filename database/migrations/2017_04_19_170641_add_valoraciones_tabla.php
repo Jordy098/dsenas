@@ -17,9 +17,9 @@ class AddValoracionesTabla extends Migration
             $table->increments('id');
             $table->tinyinteger('n_estrellas');
             $table->integer('video_id')->unsigned();
-            $table->integer('usuario_id')->unsigned();
+            $table->integer('user_id')->unsigned();
 
-            $table->foreign('usuario_id')->references('id')->on('usuarios');
+            $table->foreign('user_id')->references('id')->on('usuarios');
             $table->foreign('video_id')->references('id')->on('videos');
 
 
